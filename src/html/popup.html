@@ -1,0 +1,36 @@
+<div class="popup">
+    <div class="popup__content">
+        <div class="popup__body">
+            <button class="btn popup__close" aria-label="Закрыть">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 10L10 30" stroke="#575D77" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M10 10L30 30" stroke="#575D77" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+            <div class="popup__wrap popup__form">
+                <span class="pupup__title">Запишитесь на сеанс</span>
+                <form method="POST" class="feedback__form">
+                    <input type="text" class="feedback__input" placeholder="Ваше имя" name="name" required />
+                    <input type="text" class="feedback__input input-phone input-phone" placeholder="Телефон"
+                        name="phone" required />
+                    <input class="feedback__input--hidden" type="text" name="option">
+                    <button type="submit" class="btn feedback__btn">Записаться</button>
+                </form>
+                <p class="feedback__agreement">
+                    Нажимая на кнопке «Записаться», Вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности
+                </p>
+            </div>
+
+            <div class="popup__wrap popup__success hidden">
+                <img class="popup__img" src="@img/icons/icon-success.svg" alt="заявка отправлена">
+                <span class="pupup__subtitle">Ваша заявка отправлена</span>
+            </div>
+            <div class="popup__wrap popup__error hidden">
+                <img class="popup__img" src="@img/icons/icon-error.svg" alt="заявка отправлена">
+                <span class="pupup__subtitle">К сожалению, ваша завка не была отправлена, повторите попытку позже или позвоните нам!</span>
+            </div>
+        </div>
+    </div>
+</div>

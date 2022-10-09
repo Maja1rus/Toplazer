@@ -1,0 +1,154 @@
+.header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: var(--color-black-second);
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.header__left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header__right {
+    display: grid;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    background-color: var(--color-white);
+    height: calc(100vh - 68px);
+    width: 100%;
+    z-index: 5;
+    transition: all 0.3s ease-in-out;
+
+    opacity: 0;
+    transform: translateX(-150%);
+    visibility: hidden;
+}
+
+.header__right--active {
+    opacity: 1;
+    transform: translateX(0%);
+    visibility: visible;
+}
+
+.header__logo {
+    width: 110px;
+}
+
+.btn-nav {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+
+.btn-nav__icon {
+    position: relative;
+    display: inline-block;
+    height: 2px;
+    width: 27px;
+    background-color: var(--color-dark-gray);
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+    border-radius: 6px;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 27px;
+        background-color: var(--color-dark-gray);
+        left: 0;
+        border-radius: 6px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &::before {
+        top: 9px;
+    }
+
+    &::after {
+        bottom: 9px;
+    }
+}
+
+.btn-nav__icon--active {
+    background-color: transparent;
+
+    &::before {
+        top: 0;
+        transform: rotate(45deg);
+
+    }
+
+    &::after {
+        bottom: 0;
+        transform: rotate(-45deg);
+    }
+}
+
+
+@media screen and(min-width:941px) {
+    .header {
+        padding-top: 20px;
+        padding-bottom: 25px;
+
+        .container {
+            gap: 5px;
+        }
+    }
+
+    .header__left {
+        width: auto;
+    }
+
+    .header__right {
+        position: relative;
+        height: auto;
+        top: 0;
+        display: grid;
+        column-gap: 20px;
+        width: 100%;
+
+        opacity: 1;
+        transform: translateX(0%);
+        visibility: visible;
+    }
+
+    .btn-nav {
+        display: none;
+    }
+
+
+}
+
+@media screen and(min-width:1140px) {
+    
+    .header__logo {
+        width: 233px;
+    }
+
+    .header__right {
+        column-gap: 40px;
+    }
+}
+
+@media screen and(min-width:1235px) {
+    .header {
+        .container {
+            gap: 50px;
+        }
+    }
+
+    .header__right {
+        row-gap: 0px;
+    }
+}

@@ -1,0 +1,142 @@
+.bikini {
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__title {
+    margin: 0 0 32px 0 ;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #363A4A;
+    max-width: 961px;
+    text-align: center;
+    margin: 0 0 60px 0;
+  }
+  &__promo {
+    display: flex;
+    background: #FCF1F9;
+    border-radius: 12px;
+    max-width: 1128px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__box {
+    padding: 42px 42px 40px 0 ;
+  }
+  &__price {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 52px; 
+    color: #CC6497;
+    margin: 0 0 18px 0;
+  }
+  &__item {
+    display: flex;
+    margin-top: 8px;
+    p {
+      margin: 0;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      color: #363A4A;
+      &:last-of-type {
+        font-weight: 500;
+        margin-left: 4px;
+      }
+    }
+  }
+  &__ads {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 24px 0;
+    p {
+      margin: 0;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: #CC6497;
+      &:first-of-type {
+        border: 1px solid #CC6497;
+        border-radius: 23px;
+        padding: 10px;
+      }
+    }
+  }
+  &__btn {
+    padding: 16px 24px;
+    &-container {
+      display: block;
+    }
+  }
+}
+@media screen and (max-width: 1140px) {
+  .bikini {
+    &__item {
+      flex-direction: column;
+      p {
+        &:last-of-type {
+          margin-left: 0px;
+        }
+      }
+    }
+    &__ads {
+      flex-direction: column;
+      gap: 8px;
+    }
+     &__btn {
+      &-container {
+      display: flex;
+      justify-content: center;
+     }
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .bikini {
+    &__box {
+      padding-right: 20px;
+    }
+    &__img {
+      width: 50%;
+    }
+    &__btn {
+      display: block;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .bikini {
+    &__text {
+      text-align: left;
+      margin-bottom: 40px;
+    }
+    &__promo {
+      flex-direction: column;
+      padding: 14px;
+    }
+    &__box {
+      padding: 0;
+    }
+    &__price {
+      font-size: 24px;
+      line-height: 32px;
+    }
+    &__item {
+      p {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+    &__img {
+      width: 270px;
+      height: 250px;
+      border-radius:50%
+    }
+  }
+}

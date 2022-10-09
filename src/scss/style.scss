@@ -1,0 +1,27 @@
+// Vendors
+@import "./vendors/swiper-js";
+
+// Base
+@import "./base/base.scss";
+@import "./base/fonts";
+@import "./base/variables";
+
+// Blocks
+@import "./blocks/header";
+@import "./blocks/header-right";
+@import "./blocks/fixed";
+@import "./blocks/poster";
+@import "./blocks/services";
+@import "./blocks/choice";
+@import "./blocks/price";
+@import "./blocks/subscription";
+@import "./blocks/equipment";
+@import "./blocks/gallery";
+@import "./blocks/map";
+@import "./blocks/feedback";
+@import "./blocks/footer";
+@import "./blocks/breadcrumbs";
+@import "./blocks/bikini";
+@import "./blocks/epilation";
+@import "./blocks/popup";
+
